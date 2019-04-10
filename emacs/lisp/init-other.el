@@ -1,6 +1,6 @@
-(ido-mode t)
-(winner-mode t)
-(windmove-default-keybindings)
+;(ido-mode t)
+;(winner-mode t)
+;(windmove-default-keybindings)
 
 ;; agenda table
 (setq org-hide-leading-stars t)
