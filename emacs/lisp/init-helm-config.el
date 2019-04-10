@@ -110,4 +110,4 @@
 
 
 
-(provide 'helm-config)
+(provide 'init-helm-config)

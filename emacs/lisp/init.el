@@ -15,7 +15,7 @@
 (require 'init-org-agenda)
 (require 'init-org-journal)
 (require 'cursor-chg)
-(require 'helm-config)
+(require 'init-helm-config)
 
 (require 'auto-save)            ;; 加载自动保存模块
 (auto-save-enable)              ;; 开启自动保存功能
