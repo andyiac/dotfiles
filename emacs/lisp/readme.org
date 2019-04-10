@@ -1,0 +1,5 @@
+
+* 已安装的 package
+
+- helm
+- org-journal
