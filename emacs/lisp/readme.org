@@ -1,5 +1,12 @@
-
 * 已安装的 package
+    目前还需要手动安装，暂时没有手动安装的脚本。
 
-- helm
-- org-journal
+    - helm
+    - org-journal
+    - use-package
+    - eyebrowse
+    - helm-descbinds
+    - nyan-mode
+
+** nyan-mode
+    彩虹猫不太适合 terminal 命令行

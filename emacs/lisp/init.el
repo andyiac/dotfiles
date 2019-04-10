@@ -7,21 +7,19 @@
 
 (add-to-list 'load-path "~/dotfiles/emacs/lisp/")
 
-(require 'init-keyboard)
 (require 'init-package)
+(require 'init-keyboard)
 (require 'init-view)
 (require 'init-org-capture)
 (require 'init-other)
 (require 'init-org-agenda)
 (require 'init-org-journal)
 (require 'cursor-chg)
+(require 'helm-config)
 
 (require 'auto-save)            ;; 加载自动保存模块
 (auto-save-enable)              ;; 开启自动保存功能
 (setq auto-save-slient t)       ;; 自动保存的时候静悄悄的， 不要打扰我
-
-(setq-default initial-scratch-message
-              (concat ";; Happy hacking, " user-login-name " - Emacs ♥ you!\n\n"))
 
 
 (custom-set-variables
