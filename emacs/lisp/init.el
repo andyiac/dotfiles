@@ -16,10 +16,17 @@
 (require 'init-org-journal)
 (require 'cursor-chg)
 (require 'init-helm-config)
+(require 'window-numbering) ;; 窗口数字化
+(window-numbering-mode 1)
+
 
 (require 'auto-save)            ;; 加载自动保存模块
 (auto-save-enable)              ;; 开启自动保存功能
 (setq auto-save-slient t)       ;; 自动保存的时候静悄悄的， 不要打扰我
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; test start
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; test end 
 
 
 (custom-set-variables
@@ -29,7 +36,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (spaceline js2-mode spacemacs-theme nyan-mode helm-descbinds helm-projectile htmlize org-journal))))
+    (swiper dirtree spaceline js2-mode spacemacs-theme nyan-mode helm-descbinds helm-projectile htmlize org-journal))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

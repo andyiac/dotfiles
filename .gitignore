@@ -1,4 +1,5 @@
 emacs/my-emacs.d/bookmarks
 emacs/my-emacs.d/recentf
 *.el~
+*.el#
 .DS_Store
