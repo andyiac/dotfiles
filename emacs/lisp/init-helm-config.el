@@ -76,11 +76,8 @@
 (helm-descbinds-mode)
 
 
-
 (global-set-key (kbd "M-x") 'helm-M-x)
 (setq helm-M-x-fuzzy-match t) ;; optional fuzzy matching for helm-M-x
-
-
 
 
 ;; helm projectile mode
@@ -105,9 +102,19 @@
     ;; ignore boring files like .o and .a
     (setq helm-ff-skip-boring-files t)
     ;; replace locate with spotlight on Mac
-    (setq helm-locate-command "mdfind -name %s %s"))
+    ;; (setq helm-locate-command "mdfind -name %s %s")
+    )
   :bind (("M-p" . helm-for-files)))
 
+;; 配置颜色
+(set-face-attribute 'helm-selection nil 
+                    :background "#fff7c2"
+                    :foreground "#232323")
 
+(set-face-attribute 'helm-source-header nil 
+                    :background "#888888"
+                    :foreground "#ededed")
+
+(helm-autoresize-mode 0)
 
 (provide 'init-helm-config)

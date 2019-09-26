@@ -31,6 +31,7 @@
 ;; http://pragmaticemacs.com/emacs/dont-search-swipe/ 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; swiper                                                                 ;;
+;; 需要安装 swiper 安装包
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (global-set-key (kbd "C-s") 'swiper)
 (setq ivy-display-style 'fancy)
@@ -44,15 +45,17 @@
 
 ;; from http://pragmaticemacs.com/emacs/easily-manage-emacs-workspaces-with-eyebrowse/
 ;; eyebrowse
-(use-package eyebrowse
-  :diminish eyebrowse-mode
-  :config (progn
-            (define-key eyebrowse-mode-map (kbd "M-1") 'eyebrowse-switch-to-window-config-1)
-            (define-key eyebrowse-mode-map (kbd "M-2") 'eyebrowse-switch-to-window-config-2)
-            (define-key eyebrowse-mode-map (kbd "M-3") 'eyebrowse-switch-to-window-config-3)
-            (define-key eyebrowse-mode-map (kbd "M-4") 'eyebrowse-switch-to-window-config-4)
-            (eyebrowse-mode t)
-            (setq eyebrowse-new-workspace t)))
+;; update 2019年06月25日
+;; 现在基本不用 eyebrowse 了 而是使用 window-numbering.el 了
+;; (use-package eyebrowse
+;;   :diminish eyebrowse-mode
+;;   :config (progn
+;;             (define-key eyebrowse-mode-map (kbd "M-1") 'eyebrowse-switch-to-window-config-1)
+;;             (define-key eyebrowse-mode-map (kbd "M-2") 'eyebrowse-switch-to-window-config-2)
+;;             (define-key eyebrowse-mode-map (kbd "M-3") 'eyebrowse-switch-to-window-config-3)
+;;             (define-key eyebrowse-mode-map (kbd "M-4") 'eyebrowse-switch-to-window-config-4)
+;;             (eyebrowse-mode t)
+;;             (setq eyebrowse-new-workspace t)))
 
 
 (provide 'init-keyboard)
