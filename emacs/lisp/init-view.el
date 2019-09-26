@@ -51,4 +51,12 @@
 ;;(global-linum-mode 1) ; always show line numbers
 ;;(setq linum-format "%d| ")  ; set format
 
+
+;; set org mode level 1 color 
+(custom-set-faces
+  '(org-level-1 ((t (:foreground "#0066FF" :bold t))))
+  )
+
+
+
 (provide 'init-view)
