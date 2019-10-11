@@ -7,7 +7,7 @@
 (require 'org)
 (setq org-directory "~/org/inbox")
 (setq org-default-notes-file (concat org-directory "/Capture.org"))
-(define-key global-map "\C-cc" 'org-capture)
+;; (define-key global-map "\C-cc" 'org-capture)
 
 (setq org-capture-templates
       '(("t" "Todo" entry (file+headline "~/org/inbox/gtd.org" "GTD")
@@ -24,7 +24,8 @@
 
         ))
 
-(define-key global-map "\M-\m"
+
+(define-key global-map "\M-m"
   (lambda () (interactive) (org-capture nil "x")))
 
 
