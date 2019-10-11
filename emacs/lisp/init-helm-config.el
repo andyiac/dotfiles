@@ -98,7 +98,7 @@
   (progn
     (require 'helm-config)
     ;; limit max number of matches displayed for speed
-    (setq helm-candidate-number-limit 100)
+    (setq helm-candidate-number-limit 50)
     ;; ignore boring files like .o and .a
     (setq helm-ff-skip-boring-files t)
     ;; replace locate with spotlight on Mac
