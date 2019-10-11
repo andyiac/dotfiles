@@ -17,6 +17,9 @@
 (require 'cursor-chg)
 (require 'init-helm-config)
 (require 'window-numbering) ;; 窗口数字化
+(require 'ob-java) ;; run java in org-mode 
+(require 'ob-python) ;; run java in org-mode 
+(require 'buffer-move) ;; move window when split window 
 (window-numbering-mode 1)
 
 
@@ -26,8 +29,17 @@
 
 
 
+;; 保证有 use-package 包
+(unless (package-installed-p 'use-package)
+  (package-refresh-contents)
+  (package-install 'helm)
+  (package-install 'swiper)
+  (package-install 'use-package))
+
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; test start
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; test end 
 
 

@@ -1,4 +1,4 @@
-;; agenda table
+;; Agenda Table
 (setq org-hide-leading-stars t)
 (define-key global-map "\C-ca" 'org-agenda)
 (setq org-log-done 'time)
@@ -20,19 +20,11 @@
              "* %?\nEntered on %U %a")
 
     	("x" "buffer " entry (file+headline "~/org/inbox/buffer.org" "BUFFER")
-             "* %?\n \n  SCHEDULED: <%<%Y-%m-%d %H:%M>>")
+             "* %?\n \n  UPDATE: <%<%Y-%m-%d %H:%M>>")
 
-    	("e" "Emacs tips" entry (file+headline "~/org/inbox/emacs-tips.org" "emacs tips")
-             "* %?\n ")
-
-	("v" "vocabulary" entry (file+headline "~/org/inbox/vocabulary.org" "Vocabulary")
-             "* %?\n")
         ))
 
-(define-key global-map "\C-ci"
-  (lambda () (interactive) (org-capture nil "i")))
-
-(define-key global-map "\M-m"
+(define-key global-map "\M-\m"
   (lambda () (interactive) (org-capture nil "x")))
 
 
