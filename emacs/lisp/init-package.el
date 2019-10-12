@@ -1,11 +1,5 @@
-;; 设置使用 国内源
-;; (setq package-archives '(("gnu" . "http://elpa.emacs-china.org/gnu/")
-;; 			 ("melpa" . "http://elpa.emacs-china.org/melpa/")))
-
-;; Add MELPA repository
-(add-to-list 'package-archives '("melpa-en" . "https://melpa.org/packages/") t)
-
-(add-to-list 'package-archives
-             '("melpa-stable" . "https://stable.melpa.org/packages/") t)
+;; 使用国内源，实测清华的比 emacs-china 的快很多
+(setq package-archives '(("gnu"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")
+                         ("melpa" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")))
 
 (provide 'init-package)
