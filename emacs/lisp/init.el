@@ -17,12 +17,13 @@
 (require 'cursor-chg)
 (require 'init-helm-config)
 (require 'window-numbering) ;; 窗口数字化
-(require 'ob-java) ;; run java in org-mode 
-(require 'ob-python) ;; run java in org-mode 
+;; (require 'ob-java) ;; run java in org-mode 
+;; (require 'ob-python) ;; run java in org-mode 
 (require 'buffer-move)          ;; move window when split window 
 ;; (require 'with-editor)       ;; 还不知道这个是干啥的
 (require 'auto-save)            ;; 加载自动保存模块
 (auto-save-enable)              ;; 开启自动保存功能
+(require 'init-org-mode-conf)   ;; org-mode config 
 (setq auto-save-slient t)       ;; 自动保存的时候静悄悄的， 不要打扰我
 
 (window-numbering-mode 1)

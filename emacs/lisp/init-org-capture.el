@@ -7,7 +7,11 @@
 (require 'org)
 (setq org-directory "~/org/inbox")
 (setq org-default-notes-file (concat org-directory "/Capture.org"))
-;; (define-key global-map "\C-cc" 'org-capture)
+
+(define-key global-map "\C-cc" 'org-capture)
+(define-key global-map "\C-c\C-c"
+  (lambda () (interactive) (org-capture nil "c")))
+
 
 (setq org-capture-templates
       '(("t" "Todo" entry (file+headline "~/org/inbox/gtd.org" "GTD")
@@ -22,12 +26,13 @@
     	("x" "buffer " entry (file+headline "~/org/inbox/buffer.org" "BUFFER")
              "* %?\n \n  UPDATE: <%<%Y-%m-%d %H:%M>>")
 
+    	("c" "Capture or Inbox" entry (file "~/org/inbox/capture.org" "Capture or Inbox")
+             "* %<%Y-%m-%d %H:%M> %?\n")
+
+    	("r" "Capture or Inbox" entry (file+headline "~/org/inbox/capture.org" "Capture or Inbox")
+             "* %<%Y-%m-%d> %?\n")
+
         ))
-
-
-(define-key global-map "\M-m"
-  (lambda () (interactive) (org-capture nil "x")))
-
 
 ;; From  http://pragmaticemacs.com/emacs/a-shorter-shortcut-to-capture-todo-tasks/
 ;; function to capture a todo
