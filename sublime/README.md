@@ -6,10 +6,12 @@
 
 ```
 {
-	"font_size": 16,
-	"ignored_packages": [
-		// "Vintage"
-	]
+    "font_size": 16,
+    "ignored_packages": [
+        // "Vintage"
+    ],
+    "tab_size": 4,
+    "translate_tabs_to_spaces": true,
 }
 ```
 ## notice 
