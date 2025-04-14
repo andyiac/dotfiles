@@ -1,0 +1,21 @@
+// window config
+{
+    "selector" : "source.Kotlin",
+    "file_regex": "^(.*):([0-9]+):([0-9]+): (?:error|warning):(.*)",
+    "cmd" : "kotlinc \"${file}\" -include-runtime -d ${file_base_name}.jar && java -jar ${file_base_name}.jar || echo 'Compilation failed!'",
+    "variants": [{
+        "cmd": "kotlinc \"${file}\" -include-runtime -d ${file_base_name}.jar",
+        "name": "Compile"
+      },{
+        // "cmd": "kotlinc \"${file}\" -include-runtime -d ${file_base_name}.jar && java -jar ${file_base_name}.jar",
+        "cmd": "kotlinc \"${file}\" -include-runtime -d ${file_base_name}.jar && java -jar ${file_base_name}.jar || echo 'Compilation failed!'",
+        "name": "Compile + run 2"
+      },{
+        "name": "Run",
+        "cmd": "java -jar ${file_base_name}.jar"
+    }],
+    "shell" : "true",
+    "windows" : {
+      "path" : "$PATH"
+    }
+}
